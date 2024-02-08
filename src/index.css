@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.att-tab{
+    @apply border p-2 border-slate-500 justify-center items-center bg-blue-200;
+}
+
+.val-tab{
+    @apply border p-2 border-slate-500 text-center;
+}
