@@ -51,9 +51,9 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="overflow-x-hidden min-h-screen">
       <Navbar />
-      <div className="bg-yellow-50 min-h-screen flex flex-col items-center over-flow-x-hidden">
+      <div className="min-h-screen flex flex-col items-center">
         <form onSubmit={handleFormSubmit}>
           <InputForm
             userHandle={userHandle}

@@ -3,7 +3,7 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 export const Navbar = () => {
   return (
-      <div className='bg-navbar p-3 grid grid-cols-2 min-w-screen'>
+      <div className='bg-navbar p-3 grid grid-cols-2 w-full'>
           <div className='flex items-center'>
               Logo
           </div>

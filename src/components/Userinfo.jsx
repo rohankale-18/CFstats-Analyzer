@@ -7,11 +7,11 @@ import Charts from './Charts';
 
 const Userinfo = ({ userInfo, userSolved }) => {
   return (
-    <div className='flex justify-center items-center m-5 w-4/5'>
+    <div className='flex justify-center items-center m-5  sm:w-100'>
       {userInfo && userInfo.result && userInfo.result.length > 0 ? (
-      <div className=' bg-slate-100 w-full sm:w-auto'>
+      <div className=' w-full h-auto'>
         <div className='flex flex-col justify-center items-center mt-10 mb-10'>
-        <table className='font-bold border bg-blue-50 w-3/5 table-responsive'>
+        <table className='font-bold border bg-blue-50 w-4/5 sm:w-3/5 table-responsive'>
           <tbody>
             <Tablevalue first={"Handle"} second={userInfo.result[0].handle} />
             <Tablevalue first={"Current Rating"} second={ratingColor({rating: userInfo.result[0].rating})} />
@@ -22,8 +22,8 @@ const Userinfo = ({ userInfo, userSolved }) => {
             <Tablevalue first={"Accepted Submissions"} second={<Solved subs={userSolved.result} />} />
           </tbody>
           </table>
-          <div className='w-4/5 sm:w-3/4 md:w-9/10 lg:w-full'>
-          <Charts subs={userSolved.result} />
+          <div>
+          <Charts subs={userSolved.result}/>
           </div>
           </div>
           </div>
