@@ -55,13 +55,18 @@ function rankColor({ rank}) {
           {rank}
         </div>
       );
-    } else {
+    } else if(rank=="legendary grandmaster"){
       return (
-        <div className='flex justify-center'>
-            <div className='text-color-black capitalize'>L</div>
-            <div className='text-LegendaryGrandMaster'>egendary Grandmaster</div>
+        <div className='flex justify-center flex-row'>
+            <div className='text-LegendaryGrandMaster'>Legendary Grandmaster</div>
         </div>
       );
+    } else {
+      return (
+        <div className='flex justify-center flex-row'>
+          <div >-</div>
+        </div>
+      ); 
     }
   }
 

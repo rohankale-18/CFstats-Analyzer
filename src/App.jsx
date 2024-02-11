@@ -25,26 +25,19 @@ function App() {
       const res2 = await axios.get(
         `https://codeforces.com/api/user.status?handle=${userHandle}`
       );
-      console.log(res1.data);
-      console.log(res2.data);
       setUserInfo(res1.data);
       setUserSub(res2.data);
     } catch (error) {
-      if (error.response) {
-        // The request was made and the server responded with a status code
-        // that falls out of the range of 2xx
-        console.log("Response data:", error.response.data);
-        console.log("Response status:", error.response.status);
-        console.log("Response headers:", error.response.headers);
-      } else if (error.request) {
-        // The request was made but no response was received
-        console.log("Request made but no response received");
+      // console.error('Error fetching data:', error);
+      let errorMessage = '';
+      // Check if the error is due to an invalid handle
+      if (error.response && error.response.status === 400) {
+        errorMessage = 'Please enter a valid Codeforces handle.';
       } else {
-        // Something happened in setting up the request that triggered an Error
-        console.error("Error during request setup:", error.message);
+        errorMessage = 'Error fetching data, please try again later.';
       }
-      setUserInfo({ error: "invalid" });
-      setUserSub({ error: "invalid" });
+      setUserInfo({ error: errorMessage });
+      setUserSub({ error: errorMessage });
     } finally {
       setLoading(false);
     }

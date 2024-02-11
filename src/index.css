@@ -9,3 +9,9 @@
 .val-tab{
     @apply border p-2 border-slate-500 text-center;
 }
+
+.react-calendar-heatmap .color-scale-1 { fill: #C8E6C9; }
+.react-calendar-heatmap .color-scale-2 { fill: #81C784; }
+.react-calendar-heatmap .color-scale-3 { fill: #4CAF50; }
+.react-calendar-heatmap .color-scale-4 { fill: #388E3C; }
+.react-calendar-heatmap .color-scale-5 { fill: #1B5E20; }

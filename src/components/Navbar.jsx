@@ -5,7 +5,7 @@ export const Navbar = () => {
   return (
       <div className='bg-navbar p-3 grid grid-cols-2 w-full'>
           <div className='flex items-center'>
-              Logo
+              CFstats Analyzer
           </div>
           {/* <div className='border border-black flex justify-center items-center'>
               
