@@ -9,6 +9,7 @@ function App() {
   const [userHandle, setUserHandle] = useState("");
   const [userInfo, setUserInfo] = useState({});
   const [userSub, setUserSub] = useState({});
+  const [userRating, setUserRating] = useState({});
   const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e) => {
@@ -25,8 +26,12 @@ function App() {
       const res2 = await axios.get(
         `https://codeforces.com/api/user.status?handle=${userHandle}`
       );
+      const res3 = await axios.get(
+        `https://codeforces.com/api/user.rating?handle=${userHandle}`
+      )
       setUserInfo(res1.data);
       setUserSub(res2.data);
+      setUserRating(res3.data);
     } catch (error) {
       // console.error('Error fetching data:', error);
       let errorMessage = '';
@@ -38,6 +43,7 @@ function App() {
       }
       setUserInfo({ error: errorMessage });
       setUserSub({ error: errorMessage });
+      setUserRating({ error: errorMessage });
     } finally {
       setLoading(false);
     }
@@ -54,7 +60,7 @@ function App() {
             handleSubmit={handleFormSubmit}
           />
         </form>
-        {loading ? <Loader /> : <Userinfo userInfo={userInfo} userSolved={userSub} />}
+        {loading ? <Loader /> : <Userinfo userInfo={userInfo} userSolved={userSub} userRating={userRating} />}
       </div>
     </div>
   );

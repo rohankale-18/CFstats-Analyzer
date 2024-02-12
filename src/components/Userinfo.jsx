@@ -4,12 +4,13 @@ import rankColor from './RankColor';
 import Tablevalue from './Tablevalue';
 import Solved from './Solved';
 import Charts from './Charts';
+import BestRank from './BestRank';
 
-const Userinfo = ({ userInfo, userSolved }) => {
+const Userinfo = ({ userInfo, userSolved, userRating }) => {
   return (
     <div className='flex justify-center items-center m-5  sm:w-100'>
       {userInfo && userInfo.error ? (
-        <p>{userInfo.error }</p>
+        <p>{userInfo.error}</p>
       ) : userInfo && userInfo.result && userInfo.result.length > 0 ? (
         <div className=' w-full h-auto'>
           <div className='flex flex-col justify-center items-center mt-10 mb-10'>
@@ -22,10 +23,12 @@ const Userinfo = ({ userInfo, userSolved }) => {
                 <Tablevalue first={"Max Rank"} second={rankColor({ rank: userInfo.result[0].maxRank })} />
                 <Tablevalue first={"Total Submissions"} second={userSolved.result.length} />
                 <Tablevalue first={"Accepted Submissions"} second={<Solved subs={userSolved.result} />} />
+                <Tablevalue first={"No. of Contests"} second={userRating.result.length} />
+                <Tablevalue first={"Best Rank"} second={<BestRank ranking={userRating.result} />} />
               </tbody>
             </table>
             <div>
-              <Charts subs={userSolved.result} submap={ userSolved} />
+              <Charts subs={userSolved.result} submap={userSolved} />
             </div>
           </div>
         </div>

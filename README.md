@@ -1,8 +1,23 @@
-# React + Vite
+# Cfstats Analyzer 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+###  This project showcases analytic visualization for users of [Codeforces](https://codeforces.com/), leveraging several [APIs](https://codeforces.com/apiHelp) provided by the platform for development purposes.
+##
+### The key features of the project are:
+ -  A table consisting of following values for userhandle provided:
+	-  current and max rating 
+	-  current and max rank
+	- total submissions 
+	- accepted submissions
+	- best rank
+	- number of contests participated
+ - Barchart for visualizing problems by levels and problems by rating.
+ - Piechart for visualizing problems by tags.
+ - Calender heatmap of number of user submissions on particular date.
+##
+### Responsive website made using the following libraries and tools:
+- React for frontend and state management
+- Tailwind for styling
+- Axios for data fetching from APIs
+- Recharts library for barcharts and piecharts
+- React Calender Heatmap package ([link](https://www.npmjs.com/package/react-calendar-heatmap))
+- React icons for Github and Linkedin icons.
