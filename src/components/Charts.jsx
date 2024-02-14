@@ -11,7 +11,7 @@ const Charts = ({ subs, submap }) => {
     const customColor = [
         "#FF8A80", "#FF5252", "#FF1744",
         "#FF80AB", "#FF4081", "#F50057",
-        "#EA80FC", "#EA80FC", "#D500F9",
+        "#EA80FD", "#b538cc", "#D500F9",
         "#B388FF", "#7C4DFF", "#651FFF",
         "#8C9EFF", "#536DFE", "#3D5AFE",
         "#82B1FF", "#448AFF", "#2979FF",
