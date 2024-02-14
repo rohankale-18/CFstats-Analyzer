@@ -4,14 +4,15 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 export const Navbar = () => {
   return (
       <div className='bg-navbar p-3 grid grid-cols-2 w-full'>
-          <div className='flex items-center'>
-              CFstats Analyzer
+          <div className='flex items-center ml-2'>
+            <img src="/CF_logo.png" alt="logo" style={{ maxWidth: '50px', maxHeight: '40px' }} />
           </div>
+
           {/* <div className='border border-black flex justify-center items-center'>
               
           </div > */}
           <div className='flex justify-end items-center'> 
-            <a href='https://github.com/rohankale-18' target='_blank' rel='noopener noreferrer'>
+            <a href='https://github.com/rohankale-18/CFstats-Analyzer' target='_blank' rel='noopener noreferrer'>
                 <AiFillGithub className='text-4xl ml-1.5 mr-1.5 ' />
             </a>
             <a href='https://www.linkedin.com/in/rohan-kale-rk61003/' target='_blank' rel='noopener noreferrer'>

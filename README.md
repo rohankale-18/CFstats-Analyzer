@@ -16,8 +16,8 @@
 ##
 ### Responsive website made using the following libraries and tools:
 - React for frontend and state management
-- Tailwind for styling
+- Tailwind CSS for styling
 - Axios for data fetching from APIs
 - Recharts library for barcharts and piecharts
-- React Calender Heatmap package ([link](https://www.npmjs.com/package/react-calendar-heatmap))
+- React Calender Heatmap package ([link](https://www.npmjs.com/package/react-calendar-heatmap)) for user submission heatmap similar to Github. 
 - React icons for Github and Linkedin icons.
