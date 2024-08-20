@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const InputForm = ({ userHandle, handleInputChange, handleSubmit }) => {
   return (
@@ -10,7 +10,12 @@ const InputForm = ({ userHandle, handleInputChange, handleSubmit }) => {
         onChange={handleInputChange}
         className="px-1 border border-solid border-slate-400 bg-slate-100 rounded-sm md:ml-1"
       />
-      <button onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-700 text-white font-semibold m-2 px-2 rounded">Submit</button>
+      <button
+        onClick={handleSubmit}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-semibold m-2 px-2 rounded"
+      >
+        Submit
+      </button>
     </div>
   );
 };
